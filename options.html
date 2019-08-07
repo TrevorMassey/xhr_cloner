@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>My XHR-Dump Options</title></head>
+<body>
+
+What to do with cloned XHRs?:
+
+<label><br>
+  <input type="checkbox" id="post_on">Send a POST request</input><br>
+  <input type="checkbox" id="console_on">Print to Console</input><br>
+  <input type="checkbox" id="file_on">Save to File</input><br>
+  <input type="checkbox" id="element_on">Insert into Document</input><br>
+</label>
+<br>
+<form>
+<label>
+  API Url: <input type="text" id="api_url"></input><br>
+  API Username: <input type="text" id="api_username"></input><br>
+  API Password: <input type="text" id="api_password"></input><br>
+</label>
+<br>
+<label>
+  Save File Path: <input type="text" id="file_path"></input><br>
+</label>
+<br>
+<label>
+  Add an additional tag: <input type="text" id="tag"></input><br>
+</label>
+</form>
+<br>
+<div id="status"></div>
+<button id="save">Save</button>
+
+<script src="options.js"></script>
+</body>
+</html>
