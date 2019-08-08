@@ -5,8 +5,14 @@
     "permissions": [
         "tabs", "storage", 
         "activeTab", "webRequest", 
-        "declarativeContent",
+        "declarativeContent"
     ],
+    "icons": {
+        "16": "images/genetic-engineering-16.png",
+        "24": "images/genetic-engineering-24.png",
+        "32": "images/genetic-engineering-32.png",
+        "64": "images/genetic-engineering-64.png"
+    },
     "content_scripts": [{
         "matches": [
            "<all_urls>"
@@ -35,7 +41,7 @@
             "*://*.youtube.com/*",
             "*://*.amazon.com/*",
             "*://*.yahoo.com/*",
-            "*://*.quotemedia.com/*",
+            "*://*.quotemedia.com/*"
         ]
     },
     "web_accessible_resources": [
