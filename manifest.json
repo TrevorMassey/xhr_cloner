@@ -6,7 +6,6 @@
         "tabs", "storage", 
         "activeTab", "webRequest", 
         "declarativeContent",
-        "http://127.0.0.1:8000/api/*"
     ],
     "content_scripts": [{
         "matches": [
