@@ -32,5 +32,5 @@ If you only want to use this with specific websites, I suppose you could package
 
 ## Acknowledgments
 
-Similar scripts to this can be found throughout stack overflow and medium. This project is the result of cobbling together several of them. While I do not recall the exact sources of this advice, I want to acknlowedge that others writing was helpful in it's creation.
+Similar scripts to this can be found throughout stackoverflow and medium. This project is the result of cobbling together several of them. While I do not recall the exact sources of this advice, I want to acknowledge that others were helpful in it's creation.
 <div>Icons made by <a href="https://www.flaticon.com/authors/wanicon" title="wanicon">wanicon</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
