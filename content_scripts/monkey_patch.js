@@ -1,4 +1,4 @@
-var extension_id = "lllkdcdcbgmpbfepnnkodnahclmheiim";
+var extension_id = "gohmipkdcakpgihdmpamceajacedjnbh";
 
 (function() {
     console.log("Monkey Patch is Running");
@@ -27,7 +27,7 @@ var extension_id = "lllkdcdcbgmpbfepnnkodnahclmheiim";
                     message: message_data
                 }
             );
-            console.log("XHR Intercepted and Sent");
+            console.log("XHR Cloned");
         });
         return send.apply(this, arguments);
     };
