@@ -30,6 +30,12 @@ Chrome
 
 If you only want to use this with specific websites, I suppose you could package it up after modifying the manifest.json. Though I have not done this myself since for me the primary purpose of this is debugging and investigating how websites work.
 
+## Limitations
+
+It works by inserting a monkey patch before the page loads. This monkey patch overrides prototype methods for the built-in XMLHttpRequest objects. Any website which uses these default tools to make HTTP Requests should be clone-able with this extension. It does not work on certain websites (such as facebook) which seem to use a different method of making HTTP Requests.
+
+Let me know if you have ideas for how to make it work for more websites.
+
 ## Acknowledgments
 
 Similar scripts to this can be found throughout stackoverflow and medium. This project is the result of cobbling together several of them. While I do not recall the exact sources of this advice, I want to acknowledge that others were helpful in it's creation.
