@@ -1,6 +1,6 @@
 # XHR Cloner
 
-This is a chrome extension which can be used to clone XHR calls from any website and dump it into a file, into the console, or re-send them through another HTTP request to a server of the users choice.
+This is a chrome extension which can be used to clone XHR calls from many websites and dump it into a file, into the console, or re-send them through another HTTP request to a server of the users choice.
 
 ## Getting Started
 
