@@ -1,6 +1,6 @@
 # XHR Cloner
 
-This is a chrome extension which can be used to clone XHR calls from many websites and dump it into a file, into the console, or re-send them through another HTTP request to a server of the users choice.
+This is a chrome extension which can be used to clone XHR calls from many websites and dump it into a file, into the console, or re-send them through another HTTP request to a server of the users choice. This is useful for situations where you don't have time to figure out a new API but still need to grab a bunch of JSON data for a prototype.
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ It should now work.
 
 ### Options
 
-You can right click on the icon that appears in the toolbar and select options to open up the options screen. From here you can select what you want to do with the cloned data and provide a filename or api directions to send it to.
+You can right click on the icon that appears in the toolbar and select options to open up the options screen. From here you can select what you want to do with the cloned data and provide a filename or api endpoint to send it to.
 
 ### Prerequisites
 
@@ -32,9 +32,9 @@ If you only want to use this with specific websites, I suppose you could package
 
 ## Limitations
 
-It works by inserting a monkey patch before the page loads. This monkey patch overrides prototype methods for the built-in XMLHttpRequest objects. Any website which uses these default tools to make HTTP Requests should be clone-able with this extension. It does not work on certain websites (such as facebook) which seem to use a different method of making HTTP Requests.
+It works by inserting a monkey patch before the page loads. This monkey patch overrides prototype methods for the built-in XMLHttpRequest objects. Any website which uses these default tools to make HTTP Requests should be clone-able with this extension. It does not work on certain websites (such as Facebook) which either use a different method of making HTTP Requests, or do some other javascript magic I haven't figured out yet.
 
-Let me know if you have ideas for how to make it work for more websites.
+Please contact me if you have ideas for how to make it work for more websites.
 
 ## Acknowledgments
 
