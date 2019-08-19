@@ -1,9 +1,10 @@
+
 function handle_xhr_data(request) {
-    chrome.storage.sync.get(null, function(items) {
-        if (items.tag) {
-            tag = items.tag
+    chrome.storage.sync.get(null, function(options) {
+        if (options.tag_string) {
+            tag_string = options.tag_string
         } else {
-            tag = 'chrome-ext'  // optional tags for server
+            tag_string = 'chrome-ext'  // optional tags for server
         }
         data = {
             response_data: request.message.response_data,
@@ -11,21 +12,21 @@ function handle_xhr_data(request) {
             xhr_url: request.message.xhr_url,
             website_url: request.message.website_url,
             method: request.message.method,
-            tag_string: tag
+            tag_string: tag_string
         }
-        if (items.post_on) {
-            handle_post_request(data, items);
+        if (options.post_on) {
+            handle_post_request(data, options);
         }
-        if (items.file_on) {
-            handle_save_to_file(data, items);
+        if (options.file_on) {
+            handle_save_to_file(data, options);
         }
-        if (items.console_on) {
+        if (options.console_on) {
             handle_log_to_console(data)
         }
-        if (items.element_on) {
+        if (options.element_on) {
             handle_insert_element(data)
         }
-        if (no_outputs(items)) {
+        if (no_outputs(options)) {
             console.log("No output settings selected")
         }
     })
