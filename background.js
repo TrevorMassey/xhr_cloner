@@ -7,11 +7,11 @@ function handle_xhr_data(request) {
             tag_string = 'chrome-ext'  // optional tags for server
         }
         data = {
-            response_data: request.message.response_data,
-            request_data: request.message.request_data,
+            raw_response: request.message.response_data,
+            raw_request: request.message.request_data,
             xhr_url: request.message.xhr_url,
             website_url: request.message.website_url,
-            method: request.message.method,
+            request_method: request.message.method,
             tag_string: tag_string
         }
         if (options.post_on) {
@@ -38,15 +38,22 @@ function handle_post_request(data, options) {
     auth = options.api_username + ":" + options.api_password
     auth = "Basic " + btoa(auth)
     xhr.setRequestHeader("Authorization", auth);
+    xhr.setRequestHeader("credentials", 'include');
     xhr.setRequestHeader("Content-Type", "application/json");
-    console.group("Sending XHR Data");
-    console.debug("Data Details:")
-    console.debug(data)
     var stringified_data = JSON.stringify(data)
-    xhr.send(stringified_data);
-    console.debug("Received Response:")
-    console.debug(xhr);
+
+    xhr.onloadend = function() {
+        console.group("Received Response: " + 
+            xhr.status + ' ' + xhr.statusText)
+        res = JSON.parse(xhr.response)
+        console.debug(res);
+        console.groupEnd();
+    }
+    console.group("Sending XHR Data");
+    console.debug(data)
     console.groupEnd();
+    var res = xhr.send(stringified_data);
+
 }
 
 function handle_log_to_console(data) {
