@@ -28,6 +28,7 @@ const extension_id = "gohmipkdcakpgihdmpamceajacedjnbh";
                 extension_id, {message: message_data}
             );
             console.log("XHR Cloned");
+            console.groupEnd()
         });
         return send.apply(this, arguments);
     };
