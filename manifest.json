@@ -1,6 +1,6 @@
   {
     "name": "XHR Cloner",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Clone XHR Data!",
     "permissions": [
         "tabs", "storage", 
@@ -27,13 +27,7 @@
         "scripts": ["background.js"],
         "persistent": true
     },
-    "options_ui": {
-    "page": "options.html",
-    "open_in_tab": true
-    },
     "externally_connectable": {
-        // Chrome won't let you add <all_urls> here,
-        // so you need to manually insert each domain you want
         "matches": [
             "*://*.google.com/*",
             "*://*.github.com/*",
@@ -46,7 +40,7 @@
     },
     "web_accessible_resources": [
         "content_scripts/monkey_patch.js",
-        "content_scripts/delete_fetch.js"
+        "settings.json"
     ],
     "manifest_version": 2
   }
