@@ -1,0 +1,9 @@
+{
+        "api": {
+                "url": "http://127.0.0.1:8000/path/to/",
+                "username": "sample_username",
+                "password": "sample_password"
+        },
+        "console": false,
+        "tag_string": "chrome-ext"
+}
