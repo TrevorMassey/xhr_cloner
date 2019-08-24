@@ -22,7 +22,11 @@ function handle_xhr_data(request) {
         }
         if ('console' in settings) {
             console.group("Received Response Data:");
-            console.info(JSON.parse(request.message.response_data));
+            try {
+                console.info(JSON.parse(request.message.response_data));
+            } catch (e) {
+                console.info(request.message.response_data);
+            }
             console.groupEnd();
             done = true;
         }
