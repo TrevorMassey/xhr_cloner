@@ -18,7 +18,7 @@ const extension_id = "gohmipkdcakpgihdmpamceajacedjnbh";
             console.log(event);
             let message_data = {
                 header: 'xhr_data',
-                initiator: window.location.href,
+                source_url: window.location.href,
                 xhr_url: this._url,
                 method: this._method,
                 response_data: this.responseText,

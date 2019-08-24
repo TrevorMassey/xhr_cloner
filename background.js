@@ -13,7 +13,7 @@ function handle_xhr_data(request) {
                 raw_response: request.message.response_data,
                 raw_request: request.message.request_data,
                 xhr_url: request.message.xhr_url,
-                initiator: request.message.initiator,
+                source_url: request.message.source_url,
                 request_method: request.message.method,
                 tag_string: tag_string
             };
@@ -61,16 +61,12 @@ function handle_post_request(data, settings) {
 
 function log_response(e) {
     if (e.target.status !== 201) {
-        console.group(e.type + " Status: "
+        console.group(e.type + " status: "
             + e.target.status + ' ' + e.target.statusText);
-        if (e.target.responseType === "") {
-            console.debug(JSON.parse(e.target.response));
-        } else {
-            console.debug("Non-JSON response type: " + e.target.response)
-        }
+        console.debug(e.target.response);
         console.groupEnd();
     } else {
-        console.info(e.type + " Status: "
+        console.info(e.type + " status: "
             + e.target.status + ' ' + e.target.statusText);
     }
 }
