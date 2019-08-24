@@ -18,9 +18,9 @@ To use it, do the following:
 
 It should now work.
 
-### Options
+### Settings
 
-You can right click on the icon that appears in the toolbar and select options to open up the options screen. From here you can select what you want to do with the cloned data and provide a filename or api endpoint to send it to.
+You can create a settings.json file to configure what to do with the xhr data once you have it. See sample_settings.json as an example.
 
 ### Prerequisites
 
